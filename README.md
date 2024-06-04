@@ -5,11 +5,12 @@ All credit for the original work goes to Tymor Hamamsy and the following authors
 We have added a Huggingface compatible wrapper for the model in protvec.py
 
 Clone and install
-
-
+```
+git clone https://github.com/lhallee/ProteinVecHuggingface.git
+pip install torch pytorch_lightning transformers
+```
 
 To use from hugggingface
-
 ```
 from transformers import T5Tokenizer
 from protvec import ProteinVec, ProteinVecConfig
