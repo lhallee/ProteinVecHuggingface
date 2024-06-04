@@ -4,7 +4,7 @@ import numpy as np
 import inspect
 import re
 import pytorch_lightning as pl
-from dataclasses import dataclass, asdict
+from dataclasses import asdict
 from transformers import PreTrainedModel, T5EncoderModel, PretrainedConfig, T5Config, T5Tokenizer
 from transformers.modeling_outputs import SequenceClassifierOutput
 from blocks import *
