@@ -1,8 +1,20 @@
+---
+library_name: transformers
+tags: []
+---
+
 ## THIS PROTEIN VEC ADAPTATION WAS MODIFIED FROM https://github.com/tymor22/protein-vec
 
 All credit for the original work goes to Tymor Hamamsy and the following authors of this paper https://www.biorxiv.org/content/10.1101/2023.11.26.568742v1
 
 We have added a Huggingface compatible wrapper for the model in protvec.py
+
+Please consider liking the model page and starring the github repo if you are going to use it :)
+
+```
+https://huggingface.co/lhallee/ProteinVec
+https://github.com/lhallee/ProteinVecHuggingface
+```
 
 Clone and install
 ```
@@ -24,6 +36,14 @@ Embed a single sequence with ```embed```
 model.to_eval()
 model = model.cuda() # remove if cpu inference
 embedding = model.embed('SEQWENCE').detach().cpu() # torch.tensor(1, 512)
+```
+
+Use a particular AspectVec by setting the ```inference_mask```
+```
+model.aspect_to_keys_dict # dictionary showing the aspects
+### The model is set to ALL by default to use full ProteinVec
+model.inference_mask = model.get_mask('EC') # for Enzyme Comission AspectVec
+embedding = model.embed(...)
 ```
 
 To half precision weights
