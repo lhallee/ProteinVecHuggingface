@@ -1,8 +1,3 @@
----
-library_name: transformers
-tags: []
----
-
 ## THIS PROTEIN VEC ADAPTATION WAS MODIFIED FROM https://github.com/tymor22/protein-vec
 
 All credit for the original work goes to Tymor Hamamsy and the following authors of this paper https://www.biorxiv.org/content/10.1101/2023.11.26.568742v1
