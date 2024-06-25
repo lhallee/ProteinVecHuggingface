@@ -353,7 +353,7 @@ class ProteinVec(PreTrainedModel):
         self.moe = self.moe.eval()
     
     def to_half(self):
-        self.t5 = self.tf.half()
+        self.t5 = self.t5.half()
         self.moe = self.moe.half()
 
     def get_mask(self, aspect):
